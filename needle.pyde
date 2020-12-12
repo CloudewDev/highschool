@@ -8,10 +8,9 @@ class Needle :
         self.r = r
         
     def display (self):
-        stroke(0)
+        stroke(100)
         rotate(radians(self.r))
         line(self.x, self.y, self.x, self.y-needleLength)
-        circle(self.x, self.y, 3)
         
         
     def collideCheck(self):
@@ -26,7 +25,7 @@ class Needle :
         if colneedle == 0:
             piAssume = 0
         else:
-            piAssume = (2*needleCnt)/colneedle
+            piAssume = (2*needleCnt)/(colneedle+1)
         
         
         
